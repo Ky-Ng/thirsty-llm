@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { BetterTooltip } from '@/components/ui/tooltip';
 import { PlusIcon, VercelIcon } from './icons';
 import { useSidebar } from './ui/sidebar';
+import { ContentDialog } from './ui/content-dialog';
 
 export function ChatHeader({ selectedModelId }: { selectedModelId: string }) {
   const router = useRouter();
@@ -39,9 +40,6 @@ export function ChatHeader({ selectedModelId }: { selectedModelId: string }) {
         selectedModelId={selectedModelId}
         className="order-1 md:order-2"
       />
-      <Button variant="outline" className="md:px-2 md:h-[34px]">
-        Writeup
-      </Button>
       <Button
         className="bg-zinc-900 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-zinc-200 text-zinc-50 dark:text-zinc-900 hidden md:flex py-1.5 px-2 h-fit md:h-[34px] order-4 md:ml-auto"
         asChild
@@ -54,6 +52,7 @@ export function ChatHeader({ selectedModelId }: { selectedModelId: string }) {
           Vercel Source Code
         </Link>
       </Button>
+      <ContentDialog />
     </header>
   );
 }

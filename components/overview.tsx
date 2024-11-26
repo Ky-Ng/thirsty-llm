@@ -22,20 +22,12 @@ export const Overview = () => {
         <p className="flex flex-row justify-center gap-4 items-center">
           <strong>How Thirsty is Your LLM?</strong>
         </p>
-        <p className="flex flex-row justify-center gap-4 items-center">
-          Visualize the estimated environmental impact of your AI + LLM usage in real-time
+        <p >
+          Visualize the estimated environmental impact of your AI + LLM usage in <i>real-time</i>
         </p>
-        <p className="flex flex-row justify-center gap-4 items-center">
-          Ask "What's my environmental impact"
+        <p >
+          Ask {" "}<code className="rounded-md bg-muted px-1 py-0.5">What's my environmental impact?</code>{" "}
           to see the natural resource consumption of your current conversation
-        </p>
-        <p className="flex flex-row justify-center gap-4 items-center">
-          Checkout the <Link
-            className="font-medium underline underline-offset-4"
-            href="https://sdk.vercel.ai/docs"
-            target="_blank"
-          >writeup</Link>
-          for more background and info.
         </p>
       </div>
     </motion.div>
