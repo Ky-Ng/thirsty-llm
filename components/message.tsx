@@ -88,6 +88,10 @@ export const PreviewMessage = ({
                           block={block}
                           setBlock={setBlock}
                         />
+                      ) : toolName === 'getEnvironmentalImpact' ? (
+                        <>
+                          <p>{JSON.stringify(result)}</p>
+                        </>
                       ) : (
                         <pre>{JSON.stringify(result, null, 2)}</pre>
                       )}
