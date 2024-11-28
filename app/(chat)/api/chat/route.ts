@@ -28,7 +28,7 @@ import {
 } from '@/lib/utils';
 
 import { generateTitleFromUserMessage } from '../../actions';
-import { getWordCount, getWordMessagesCount } from './environmental-impact-helper';
+import { getElectricityConversion, getWaterConversion, getWordCount, getWordMessagesCount } from './environmental-impact-helper';
 
 export const maxDuration = 60;
 
@@ -123,8 +123,12 @@ export async function POST(request: Request) {
         execute: async () => {
           const wordCount = getWordMessagesCount(messages) // Conversation word count
                             + getWordCount(systemPrompt) // LLM Prompt ("You are a helpful assistant...")
-
-          return { wordCount: wordCount };
+                            
+          const ret = { wordCount: wordCount ,
+            waterImpact: getWaterConversion(wordCount),
+            electricityImpact: getElectricityConversion(wordCount)
+          }
+          return ret;
         },
       },
       createDocument: {
