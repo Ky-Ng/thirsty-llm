@@ -205,9 +205,9 @@ export function MultimodalInput({
    */
   useEffect(() => {
     if (input == environmentalImpactPrompt) {
-      submitForm();
+      handleSubmit();
     }
-  }, [input, submitForm]);
+  }, [input]);
 
   return (
     <div className="relative w-full flex flex-col gap-4">
