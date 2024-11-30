@@ -21,11 +21,15 @@ export const Overview = () => {
         <p className="flex flex-row justify-center gap-4 items-center">
           <strong>How Thirsty is Your LLM?</strong>
         </p>
-        <p >
-          Visualize the estimated environmental impact of your AI + LLM usage in <i>real-time</i>
+        <p>
+          Visualize the estimated environmental impact of your AI + LLM usage in{' '}
+          <i>real-time</i>
         </p>
-        <p >
-          Ask {" "}<code className="rounded-md bg-muted px-1 py-0.5">What's my environmental impact?</code>{" "}
+        <p>
+          Ask{' '}
+          <code className="rounded-md bg-muted px-1 py-0.5">
+            What's my environmental impact?
+          </code>{' '}
           to see the natural resource consumption of your current conversation
         </p>
       </div>

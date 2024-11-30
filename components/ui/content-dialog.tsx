@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button';
 import {
   Dialog,
   DialogContent,
@@ -7,17 +7,17 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export function ContentDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-      <Button variant="outline" className="md:px-2 md:h-[34px]">
-        Writeup
-      </Button>
+        <Button variant="outline" className="md:px-2 md:h-[34px]">
+          Writeup
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -53,5 +53,5 @@ export function ContentDialog() {
         </DialogFooter>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

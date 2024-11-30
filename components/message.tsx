@@ -14,6 +14,7 @@ import { Markdown } from './markdown';
 import { MessageActions } from './message-actions';
 import { PreviewAttachment } from './preview-attachment';
 import { Weather } from './weather';
+import EnvironmentVisualization from './environment-visualization';
 
 export const PreviewMessage = ({
   chatId,
@@ -89,9 +90,7 @@ export const PreviewMessage = ({
                           setBlock={setBlock}
                         />
                       ) : toolName === 'getEnvironmentalImpact' ? (
-                        <>
-                          <p>{JSON.stringify(result)}</p>
-                        </>
+                        <EnvironmentVisualization result={result} />
                       ) : (
                         <pre>{JSON.stringify(result, null, 2)}</pre>
                       )}

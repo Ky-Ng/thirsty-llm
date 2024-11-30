@@ -42,7 +42,8 @@ const suggestedActions = [
   },
 ];
 
-const environmentalImpactPrompt = "What is the environmental impact of this conversation?"
+const environmentalImpactPrompt =
+  'What is the environmental impact of this conversation?';
 
 export function MultimodalInput({
   chatId,
@@ -95,7 +96,7 @@ export function MultimodalInput({
     if (input == environmentalImpactPrompt) {
       submitForm();
     }
-  }, [input])
+  }, [input]);
 
   const adjustHeight = () => {
     if (textareaRef.current) {
@@ -338,7 +339,7 @@ export function MultimodalInput({
       <Button
         className="rounded-full p-1.5 h-fit absolute bottom-2 left-2 m-0.5 dark:border-zinc-700"
         onClick={() => {
-          setInput(environmentalImpactPrompt)
+          setInput(environmentalImpactPrompt);
         }}
         variant="outline"
         disabled={isLoading}
