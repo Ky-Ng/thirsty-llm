@@ -76,6 +76,9 @@ export default function EnvironmentVisualization({ result }: Props) {
             </p>
           </div>
         </div>
+
+        <small>* Estimated resource consumption, see Learn More for details</small>
+        
       </div>
     </div>
   );
