@@ -3,31 +3,47 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+import OpacityIcon from '@mui/icons-material/Opacity';
+import FlashOnIcon from '@mui/icons-material/FlashOn';
 
 export function ContentDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="outline" className="md:px-2 md:h-[34px]">
-          Writeup
+          Learn More
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      {/* <DialogContent className="sm:max-w-[425px]"> */}
+      <DialogContent>
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
+          <DialogTitle>How Thirsty is Your LLM?</DialogTitle>
           <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
+            Understand the estimated <OpacityIcon fontSize='small' /> water and <FlashOnIcon fontSize='small' /> electricity consumption of your AI powered conversations
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>What is the Thirsty LLM Project?</AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
+          {/* <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
@@ -46,11 +62,12 @@ export function ContentDialog() {
               defaultValue="@peduarte"
               className="col-span-3"
             />
-          </div>
+          </div> */}
+          <p>hi</p>
         </div>
-        <DialogFooter>
+        {/* <DialogFooter>
           <Button type="submit">Save changes</Button>
-        </DialogFooter>
+        </DialogFooter> */}
       </DialogContent>
     </Dialog>
   );
