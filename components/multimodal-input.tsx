@@ -89,15 +89,6 @@ export function MultimodalInput({
     }
   }, []);
 
-  /**
-   * Submits the environmental impact prompt if the button is pressed or if it's typed in
-   */
-  useEffect(() => {
-    if (input == environmentalImpactPrompt) {
-      submitForm();
-    }
-  }, [input]);
-
   const adjustHeight = () => {
     if (textareaRef.current) {
       textareaRef.current.style.height = 'auto';
@@ -208,6 +199,15 @@ export function MultimodalInput({
     },
     [setAttachments],
   );
+
+  /**
+   * Submits the environmental impact prompt if the button is pressed or if it's typed in
+   */
+  useEffect(() => {
+    if (input == environmentalImpactPrompt) {
+      submitForm();
+    }
+  }, [input, submitForm]);
 
   return (
     <div className="relative w-full flex flex-col gap-4">
