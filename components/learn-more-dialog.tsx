@@ -65,7 +65,7 @@ export function LearnMoreDialog() {
             <AccordionItem value="item-1">
               <AccordionTrigger>Why Individual Impact?</AccordionTrigger>
               <AccordionContent>
-                <p>This project focuses on quantifying the environmental impact of a single user{"'"}s (that{"'"}s you!) to make the large environmetal impact of just a single user hit home.</p>
+                <p>This project focuses on quantifying the environmental impact of a single user{"'"}s (that{"'"}s you!) to make the large environmental impact of just a single user hit home.</p>
                 <br />
                 <p>That{"'"}s why while we measure the impact in milliliters (mL) and kilo-watt-hours (kWh) we also measure the resource draw in relatable measurements (i.e. # of Coke Cans, # of AA Batteries, # of Light Bulbs powered for 1 hour)</p>
               </AccordionContent>
