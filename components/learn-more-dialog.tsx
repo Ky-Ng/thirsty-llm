@@ -65,32 +65,32 @@ export function LearnMoreDialog() {
             <AccordionItem value="item-1">
               <AccordionTrigger>Why Individual Impact?</AccordionTrigger>
               <AccordionContent>
-                <p>This project focuses on quantifying the environmental impact of a single user's (that's you!) to make the large environmetal impact of just a single user hit home.</p>
+                <p>This project focuses on quantifying the environmental impact of a single user{"'"}s (that{"'"}s you!) to make the large environmetal impact of just a single user hit home.</p>
                 <br />
-                <p>That's why while we measure the impact in milliliters (mL) and kilo-watt-hours (kWh) we also measure the resource draw in relatable measurements (i.e. # of Coke Cans, # of AA Batteries, # of Light Bulbs powered for 1 hour)</p>
+                <p>That{"'"}s why while we measure the impact in milliliters (mL) and kilo-watt-hours (kWh) we also measure the resource draw in relatable measurements (i.e. # of Coke Cans, # of AA Batteries, # of Light Bulbs powered for 1 hour)</p>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
 
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
-              <AccordionTrigger>How do I use Thirsty LLM "properly"?</AccordionTrigger>
+              <AccordionTrigger>How do I use Thirsty LLM {'"'}properly{'"'}?</AccordionTrigger>
               <AccordionContent>
                 <p>
-                  There's no right or wrong way to use this project!
+                  There{"'"}s no right or wrong way to use this project!
                   Simply chat with this{' '}
                   <Link className="underline" href={"https://vercel.com/templates/next.js/nextjs-ai-chatbot"} target="_noblank">
                     Vercel AI-SDK
                   </Link>{' '}
                   implementation of{' '}
                   <Link className="underline" href={"https://openai.com/index/hello-gpt-4o/"} target="_noblank">
-                    OpenAI's GPT-4o
+                    OpenAI{"'"}s GPT-4o
                   </Link>{' '}
                   like you would with ChatGPT.
                 </p>
                 <br />
                 <p>
-                  When you're ready to see the environmental impact, press the <code className='rounded-md bg-muted px-1 py-0.5'><RecyclingIcon fontSize='small' />
+                  When you{"'"}re ready to see the environmental impact, press the <code className='rounded-md bg-muted px-1 py-0.5'><RecyclingIcon fontSize='small' />
                     Get Environmetal Impact</code> button to see the estimated environmetal draw.
                 </p>
               </AccordionContent>
@@ -142,7 +142,7 @@ export function LearnMoreDialog() {
                 <>
                   <strong>1. LLMs are blackboxes</strong>
                   <p>
-                    Most LLMs like OpenAI's ChatGPT are closed source meaning that we have no access to the
+                    Most LLMs like OpenAI{"'"}s ChatGPT are closed source meaning that we have no access to the
                     code used to run these models--making it quite difficult to reproduce 3rd party
                     monitoring of resource consumption.
                   </p>
@@ -158,23 +158,23 @@ export function LearnMoreDialog() {
                 <>
                   <strong>2. LLMs are distributed</strong>
                   <p>
-                    Like many largescale software systems, LLMs are "distributed", meaning that instances(copies) of
+                    Like many largescale software systems, LLMs are {'"'}distributed{'"'}, meaning that instances(copies) of
                     LLMs are replicated in data centers across the globe.
                   </p>
                   <br />
                   <p>
                     For electricity, the environmental impact of LLM usage will vary depending on the location, energy efficiency, and
-                    energy availability of the power plant powering the data center the LLM "lives in".
+                    energy availability of the power plant powering the data center the LLM {'"'}lives in{'"'}.
                   </p>
                   <br />
                   <p>
-                    For water, the environmental impact of LLM usage will vary depending on the data center's access
+                    For water, the environmental impact of LLM usage will vary depending on the data center{"'"}s access
                     to water and the ambient temperature. Since hotter areas require more cooling and thus more water,
                     a data center in Arizona would consume more water than a hypothetical data center in Alaska.
                   </p>
                   <br />
                   <p>
-                    Since it's not possible to know where models are being hosted for a specific conversation, we
+                    Since it{"'"}s not possible to know where models are being hosted for a specific conversation, we
                     rely on simplifying assumptions about baseline water and electricity usage.
                   </p>
                 </>
@@ -193,7 +193,7 @@ export function LearnMoreDialog() {
                   </p>
                   <br />
                   <p>
-                    Thus, LLMs process "batches" or many conversations simultaneously--making it difficult to estimate
+                    Thus, LLMs process {'"'}batches{'"'} or many conversations simultaneously--making it difficult to estimate
                     the environmental impact of a single conversation.
                   </p>
                   <br />
@@ -219,7 +219,7 @@ export function LearnMoreDialog() {
                   </code>{' '}
                   we use simplifying assumptions from the paper{' '}
                   <Link href={"https://arxiv.org/abs/2304.03271"} target='_noblank' className="underline">
-                    Making AI Less "Thirsty"
+                    Making AI Less {'"'}Thirsty{'"'}
                   </Link>{' '}
                   used in the Washington Post Article{' '}
                   <Link href={"https://www.washingtonpost.com/technology/2024/09/18/energy-ai-use-electricity-water-data-centers/"} target='_noblank' className="underline">
@@ -289,7 +289,7 @@ export function LearnMoreDialog() {
                 </p>
                 <p>
                   In the default state of the Model View Controller (MVC), the user interacts with the app in
-                  "Chat mode". Once the {' '}
+                  {'"'}Chat mode{'"'}. Once the {' '}
                   <code className='rounded-md bg-muted px-1 py-0.5'>
                     <RecyclingIcon fontSize='small' />Get Environmetal Impact
                   </code>{' '}
@@ -312,7 +312,7 @@ export function LearnMoreDialog() {
                 </div>
                 <br />
                 <p>
-                  For deployment, authentication, and datastore, we use the Vercel platform's built-in CI/CD,
+                  For deployment, authentication, and datastore, we use the Vercel platform{"'"}s built-in CI/CD,
                   Postgres Relational Database, and Vercel Blob storage.
                 </p>
               </AccordionContent>
