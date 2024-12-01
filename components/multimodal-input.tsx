@@ -24,6 +24,7 @@ import { useLocalStorage, useWindowSize } from 'usehooks-ts';
 import { sanitizeUIMessages } from '@/lib/utils';
 
 import { ArrowUpIcon, PaperclipIcon, StopIcon } from './icons';
+import RecyclingIcon from '@mui/icons-material/Recycling';
 import { PreviewAttachment } from './preview-attachment';
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
@@ -40,6 +41,9 @@ const suggestedActions = [
     action: 'Help me draft a short essay about Silicon Valley',
   },
 ];
+
+const environmentalImpactPrompt =
+  'What is the environmental impact of this conversation?';
 
 export function MultimodalInput({
   chatId,
@@ -196,6 +200,15 @@ export function MultimodalInput({
     [setAttachments],
   );
 
+  /**
+   * Submits the environmental impact prompt if the button is pressed or if it's typed in
+   */
+  useEffect(() => {
+    if (input == environmentalImpactPrompt) {
+      handleSubmit();
+    }
+  }, [input, handleSubmit]);
+
   return (
     <div className="relative w-full flex flex-col gap-4">
       {messages.length === 0 &&
@@ -320,6 +333,19 @@ export function MultimodalInput({
         disabled={isLoading}
       >
         <PaperclipIcon size={14} />
+      </Button>
+
+      {/* Environmental Impact Button */}
+      <Button
+        className="rounded-full p-1.5 h-fit absolute bottom-2 left-2 m-0.5 dark:border-zinc-700"
+        onClick={() => {
+          setInput(environmentalImpactPrompt);
+        }}
+        variant="outline"
+        disabled={isLoading}
+      >
+        <RecyclingIcon />
+        Get Environmetal Impact
       </Button>
     </div>
   );

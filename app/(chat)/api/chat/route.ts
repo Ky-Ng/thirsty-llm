@@ -28,6 +28,12 @@ import {
 } from '@/lib/utils';
 
 import { generateTitleFromUserMessage } from '../../actions';
+import {
+  getElectricityConversion,
+  getWaterConversion,
+  getWordCount,
+  getWordMessagesCount,
+} from './environmental-impact-helper';
 
 export const maxDuration = 60;
 
@@ -35,7 +41,8 @@ type AllowedTools =
   | 'createDocument'
   | 'updateDocument'
   | 'requestSuggestions'
-  | 'getWeather';
+  | 'getWeather'
+  | 'getEnvironmentalImpact';
 
 const blocksTools: AllowedTools[] = [
   'createDocument',
@@ -45,7 +52,13 @@ const blocksTools: AllowedTools[] = [
 
 const weatherTools: AllowedTools[] = ['getWeather'];
 
-const allTools: AllowedTools[] = [...blocksTools, ...weatherTools];
+const environmentalImpactTools: AllowedTools[] = ['getEnvironmentalImpact'];
+
+const allTools: AllowedTools[] = [
+  ...blocksTools,
+  ...weatherTools,
+  ...environmentalImpactTools,
+];
 
 export async function POST(request: Request) {
   const {
@@ -107,8 +120,26 @@ export async function POST(request: Request) {
             `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m&hourly=temperature_2m&daily=sunrise,sunset&timezone=auto`,
           );
 
+          console.log('Executed weather function');
+
           const weatherData = await response.json();
           return weatherData;
+        },
+      },
+      getEnvironmentalImpact: {
+        description: 'Get the environmental impact of the current conversation',
+        parameters: z.object({}),
+        execute: async () => {
+          const wordCount =
+            getWordMessagesCount(messages) + // Conversation word count
+            getWordCount(systemPrompt); // LLM Prompt ("You are a helpful assistant...")
+
+          const ret = {
+            wordCount: wordCount,
+            waterImpact: getWaterConversion(wordCount),
+            electricityImpact: getElectricityConversion(wordCount),
+          };
+          return ret;
         },
       },
       createDocument: {
@@ -342,7 +373,10 @@ export async function POST(request: Request) {
                     messageIdFromServer: messageId,
                   });
                 }
-
+                console.log(
+                  `Saving message ${messageId} with content`,
+                  message.content,
+                );
                 return {
                   id: messageId,
                   chatId: id,
