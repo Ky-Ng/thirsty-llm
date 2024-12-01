@@ -3,6 +3,8 @@ ___
 ## Introduction
 Understand the estimated water and electricity consumption of your AI powered conversations.
 
+[UI Image Demo](public/images/DemoUI.png)
+
 ### Tech Stack
 
 | **Technology**                                               | **Description**                                                         |
