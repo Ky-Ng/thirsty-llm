@@ -7,7 +7,7 @@ Understand the estimated water and electricity consumption of your AI powered co
 
 | **Technology**                                               | **Description**                                                         |
 | ------------------------------------------------------------ | ----------------------------------------------------------------------- |
-| **Vercel AI-SDK Chatbot Template**                           | Template for building AI-powered chatbots with Vercel                   |
+| [**Vercel AI-SDK Chatbot Template**](https://vercel.com/templates/next.js/nextjs-ai-chatbot)                           | Template for building AI-powered chatbots with Vercel                   |
 | **Next.JS + React**                                          | JavaScript frameworks for building dynamic web applications             |
 | **Tailwind + Shadcn/ui**                                     | Utility-first CSS framework + component library for UI                  |
 | **OpenAI GPT-4o**                                            | Large Language Model used for conversational AI + LLM Tool Use          |
