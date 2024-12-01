@@ -3,16 +3,18 @@ ___
 ## Introduction
 Understand the estimated water and electricity consumption of your AI powered conversations.
 
+### Tech Stack
+
 | **Technology**                                               | **Description**                                                         |
 | ------------------------------------------------------------ | ----------------------------------------------------------------------- |
 | **Vercel AI-SDK Chatbot Template**                           | Template for building AI-powered chatbots with Vercel                   |
 | **Next.JS + React**                                          | JavaScript frameworks for building dynamic web applications             |
 | **Tailwind + Shadcn/ui**                                     | Utility-first CSS framework + component library for UI                  |
-| **OpenAI GPT-4o**                                            | Large Language Model used for conversational AI                         |
+| **OpenAI GPT-4o**                                            | Large Language Model used for conversational AI + LLM Tool Use          |
 | **Vercel CI/CD deployments integration with Github Actions** | Continuous Integration and Deployment through Vercel and Github Actions |
 | **Vercel Postgres Relational Database**                      | Managed Postgres database on Vercel for data storage                    |
 | **Vercel Blob Storage**                                      | Cloud storage for storing and serving files                             |
-
+### Table of Contents
 - [What is How Thirsty is your LLM?](#what-is-how-thirsty-is-your-llm)
 - [Why Individual Impact?](#why-individual-impact)
 - [How do I use Thirsty LLM "properly"?](#how-do-i-use-thirsty-llm-properly)
