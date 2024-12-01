@@ -3,16 +3,21 @@ ___
 ## Introduction
 Understand the estimated water and electricity consumption of your AI powered conversations.
 
-Built on Vercel AI-SDK Chatbot Template, Next.JS\/React, OpenAI GPT-4o, and Vercel CI/CD deployments.
+| **Technology**                                               | **Description**                                                         |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| **Vercel AI-SDK Chatbot Template**                           | Template for building AI-powered chatbots with Vercel                   |
+| **Next.JS + React**                                          | JavaScript frameworks for building dynamic web applications             |
+| **Tailwind + Shadcn/ui**                                     | Utility-first CSS framework + component library for UI                  |
+| **OpenAI GPT-4o**                                            | Large Language Model used for conversational AI                         |
+| **Vercel CI/CD deployments integration with Github Actions** | Continuous Integration and Deployment through Vercel and Github Actions |
+| **Vercel Postgres Relational Database**                      | Managed Postgres database on Vercel for data storage                    |
+| **Vercel Blob Storage**                                      | Cloud storage for storing and serving files                             |
 
 - [What is How Thirsty is your LLM?](#what-is-how-thirsty-is-your-llm)
 - [Why Individual Impact?](#why-individual-impact)
 - [How do I use Thirsty LLM "properly"?](#how-do-i-use-thirsty-llm-properly)
 - [Motivation](#motivation)
 - [Difficulty in Estimations](#difficulty-in-estimations)
-  - [1. LLMs are blackboxes](#1-llms-are-blackboxes)
-  - [2. LLMs are distributed](#2-llms-are-distributed)
-  - [3. LLMs Process in Parallel](#3-llms-process-in-parallel)
 - [Future Considerations](#future-considerations)
 - [Technical Details (for Geeks)](#technical-details-for-geeks)
 - [Citations](#citations)
