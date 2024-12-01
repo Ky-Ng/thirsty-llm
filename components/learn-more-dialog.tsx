@@ -312,7 +312,7 @@ export function LearnMoreDialog() {
                 </div>
                 <br />
                 <p>
-                  For deployment, authentication, and datastore, we use the Vercel platform's built-in CI/CD, 
+                  For deployment, authentication, and datastore, we use the Vercel platform's built-in CI/CD,
                   Postgres Relational Database, and Vercel Blob storage.
                 </p>
               </AccordionContent>
@@ -323,31 +323,37 @@ export function LearnMoreDialog() {
             <AccordionItem value="item-1">
               <AccordionTrigger>Citations</AccordionTrigger>
               <AccordionContent>
-
+                <p>
+                  Kaplan, J., McCandlish, S., Henighan, T., Brown, T. B., Chess, B., Child, R., Gray, S., Radford,
+                  A., Wu, J., & Amodei, D. (2020). Scaling Laws for Neural Language Models. arXiv:
+                  2001.08361. ​​https://arxiv.org/abs/2001.08361
+                </p>
+                <br />
+                <p>
+                  Li, P ., Y ang, J., Islam, M. A., & Ren, S. (2023). Making AI Less “Thirsty”: Uncovering and
+                  Addressing the Secret Water Footprint of AI Models. arXiv preprint arXiv:2304.03271.
+                  https://arxiv.org/abs/2304.03271
+                </p>
+                <br />
+                <p>
+                  Luccioni, S., Trevelin, B., & Mitchell, M. (2024). The Environmental Impacts of AI -- Policy
+                  primer. Hugging Face, https://doi.org/10.57967/hf/3004
+                </p>
+                <br />
+                <p>
+                  Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., &
+                  Polosukhin, I. (2017). Attention Is All You Need. arXiv preprint arXiv:1706.03762.
+                  https://arxiv.org/abs/1706.03762
+                </p>
+                <br />
+                <p>
+                  Verma, P ., & Tan, S. (2024). A Bottle of Water Per Email: the Hidden Environmental Costs of
+                  Using AI Chatbots. Washington Post. www.washingtonpost.com/technology/2024/09/
+                  18/energy-ai-use-electricity-water-data-centers/
+                </p>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-          {/* <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input
-              id="name"
-              defaultValue="Pedro Duarte"
-              className="col-span-3"
-            />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input
-              id="username"
-              defaultValue="@peduarte"
-              className="col-span-3"
-            />
-          </div> */}
-
         </div>
         <DialogFooter>
           <Link href="https://github.com/Ky-Ng/thirsty-llm" target="_noblank">
