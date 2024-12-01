@@ -1,8 +1,22 @@
 # How Thirsty is Your LLM?
 ___
+## Introduction
 Understand the estimated water and electricity consumption of your AI powered conversations.
 
 Built on Vercel AI-SDK Chatbot Template, Next.JS\/React, OpenAI GPT-4o, and Vercel CI/CD deployments.
+
+- [What is How Thirsty is your LLM?](#what-is-how-thirsty-is-your-llm)
+- [Why Individual Impact?](#why-individual-impact)
+- [How do I use Thirsty LLM "properly"?](#how-do-i-use-thirsty-llm-properly)
+- [Motivation](#motivation)
+- [Difficulty in Estimations](#difficulty-in-estimations)
+  - [1. LLMs are blackboxes](#1-llms-are-blackboxes)
+  - [2. LLMs are distributed](#2-llms-are-distributed)
+  - [3. LLMs Process in Parallel](#3-llms-process-in-parallel)
+- [Future Considerations](#future-considerations)
+- [Technical Details (for Geeks)](#technical-details-for-geeks)
+- [Citations](#citations)
+
 ___
 ## What is How Thirsty is your LLM?
 The `How Thirsty is your LLM?` project (or `Thirsty LLM` for short) aims to visualize the immense water and electricity usage of Large Language Models (LLMs)
