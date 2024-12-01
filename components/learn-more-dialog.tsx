@@ -21,6 +21,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import RecyclingIcon from '@mui/icons-material/Recycling';
 import Link from 'next/link';
 import { Tab } from '@mui/material';
+import Image from 'next/image'
 
 export function LearnMoreDialog() {
   return (
@@ -245,7 +246,7 @@ export function LearnMoreDialog() {
               <AccordionTrigger>Future Considerations</AccordionTrigger>
               <AccordionContent>
                 <p>
-                  LLM companies such as OpenAI and Anthropic are seeing boosts in model 
+                  LLM companies such as OpenAI and Anthropic are seeing boosts in model
                   performance through larger models according to{' '}
                   <Link target='_noblank' className="underline" href={"https://arxiv.org/abs/2001.08361"}>
                     scaling laws
@@ -279,7 +280,41 @@ export function LearnMoreDialog() {
             <AccordionItem value="item-1">
               <AccordionTrigger>Technical Details (for Geeks)</AccordionTrigger>
               <AccordionContent>
-
+                <p>
+                  This project is built on the{' '}
+                  <Link className="underline" href={"https://vercel.com/templates/next.js/nextjs-ai-chatbot"} target="_noblank">
+                    Vercel AI-SDK Chatbot Template
+                  </Link>{' '}
+                  with custom LLM tool functions for estimating the environmental impact.
+                </p>
+                <p>
+                  In the default state of the Model View Controller (MVC), the user interacts with the app in
+                  "Chat mode". Once the {' '}
+                  <code className='rounded-md bg-muted px-1 py-0.5'>
+                    <RecyclingIcon fontSize='small' />Get Environmetal Impact
+                  </code>{' '}
+                  is pressed, the app prompts the LLM to call the custom{' '}
+                  <code className='rounded-md bg-muted px-1 py-0.5'>
+                    getEnvironmentalImpact
+                  </code>{' '}
+                  tool which calculates the estimated electricity and water draw based on the running word count
+                  of the System Prompt, user messages, and tool response.
+                </p>
+                <br />
+                <div style={{ width: '50%', height: 'auto' }}>
+                  <Image
+                    src="/images/UI_Flowchart.png"
+                    alt="Flowchart of UI"
+                    layout="responsive"
+                    width={500}
+                    height={300}
+                  />
+                </div>
+                <br />
+                <p>
+                  For deployment, authentication, and datastore, we use the Vercel platform's built-in CI/CD, 
+                  Postgres Relational Database, and Vercel Blob storage.
+                </p>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
