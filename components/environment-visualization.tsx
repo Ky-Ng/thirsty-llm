@@ -21,6 +21,10 @@ export default function EnvironmentVisualization({ result }: Props) {
   const numAABateries = result.electricityImpact.numAABateries;
   const numLEDsForOneHour = result.electricityImpact.numLEDsForOneHour;
 
+  function addCommas(num: string | number){
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  }
+
   return (
     <div>
       <div
@@ -35,7 +39,7 @@ export default function EnvironmentVisualization({ result }: Props) {
               <p>Environmental Impact</p>
             </div>
           </div>
-          <div className="text-blue-50">{`Word Count: ${wordCount}`}</div>
+          <div className="text-blue-50">{`Word Count: ${addCommas(wordCount)}`}</div>
         </div>
 
         <div className="flex flex-row justify-between">
@@ -45,10 +49,10 @@ export default function EnvironmentVisualization({ result }: Props) {
             </div>
             <p>
               <OpacityIcon />
-              {waterEstimationML.toFixed(1)} mL of water used
+              {addCommas(waterEstimationML.toFixed(1))} mL of water used
             </p>
             <p>
-              <LocalDrinkIcon />≈ {numCokeCans.toFixed(1)} Coke Cans
+              <LocalDrinkIcon />≈ {addCommas(numCokeCans.toFixed(1))} Coke Cans
             </p>
           </div>
         </div>
@@ -60,18 +64,21 @@ export default function EnvironmentVisualization({ result }: Props) {
             </div>
             <p>
               <FlashOnIcon />
-              {electricityEstimationKWH.toFixed(2)} kWh
+              {addCommas(electricityEstimationKWH.toFixed(2))} kWh
             </p>
             <p>
-              <BatteryChargingFullIcon />≈ {Math.round(numAABateries)} AA
+              <BatteryChargingFullIcon />≈ {addCommas(Math.round(numAABateries))} AA
               Batteries
             </p>
             <p>
               <TungstenIcon />
-              Power {Math.round(numLEDsForOneHour)} light bulbs for 1 hour
+              Power {addCommas(Math.round(numLEDsForOneHour))} light bulbs for 1 hour
             </p>
           </div>
         </div>
+
+        <small>* Estimated resource consumption, see Learn More for details</small>
+        
       </div>
     </div>
   );

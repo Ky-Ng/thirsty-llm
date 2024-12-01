@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import { BetterTooltip } from '@/components/ui/tooltip';
 import { PlusIcon, VercelIcon } from './icons';
 import { useSidebar } from './ui/sidebar';
-import { ContentDialog } from './ui/content-dialog';
+import { LearnMoreDialog } from './learn-more-dialog';
 
 export function ChatHeader({ selectedModelId }: { selectedModelId: string }) {
   const router = useRouter();
@@ -49,7 +49,7 @@ export function ChatHeader({ selectedModelId }: { selectedModelId: string }) {
           Vercel Source Code
         </Link>
       </Button>
-      <ContentDialog />
+      <LearnMoreDialog />
     </header>
   );
 }
